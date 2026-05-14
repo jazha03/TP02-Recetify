@@ -17,7 +17,23 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult GenerarSugerencia(SugeridorReceta datos)
+    {
+        int edad = datos.CalcularEdad(datos.FechaNacimiento);
+        string plato = datos.DeterminarPlato(datos.TipoComida, datos.Presupuesto);
+        double tiempo = datos.CalcularTiempo(datos.TipoComida, datos.CantComensales);
+        string dificultad = datos.DeterminarDificultad(datos.Presupuesto, datos.CantComensales);
 
+      
+        ViewBag.Nombre = datos.Nombre;
+        ViewBag.Edad = edad;
+        ViewBag.Plato = plato;
+        ViewBag.Tiempo = tiempo;
+        ViewBag.Dificultad = dificultad;
+        ViewBag.CantComensales = datos.CantComensales;
+        ViewBag.Presupuesto = datos.Presupuesto;
+        return View("Resultado");
+    }
     public IActionResult Privacy()
     {
         return View();
