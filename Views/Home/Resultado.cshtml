@@ -2,32 +2,12 @@
 
     <h2>Resultado de la receta</h2>
 
-    Nombre del cocinero:
-    <input type="text" value="@ViewBag.Nombre" />
-
-    <br><br>
-
-    Edad:
-    <input type="number" value="@ViewBag.Edad" />
-
-    <br><br>
-
-    Plato sugerido:
-    <input type="text" value="@ViewBag.Plato" />
-
-    <br><br>
-
-    Tiempo estimado de preparación:
-    <input type="number" value="@ViewBag.Tiempo" />
-
-    <br><br>
-
-    Cantidad de personas:
-    <input type="number" value="@ViewBag.CantidadPersonas" />
-
-    <br><br>
-
-    Dificultad del plato:
-    <input type="text" value="@ViewBag.Dificultad" />
-
+    <p>Nombre: @ViewBag.nombre</p>
+    <p>Fecha de nacimiento: @ViewBag.fechaNacimiento</p>
+    <p>Tipo de comida: @ViewBag.tipoComida</p>
+    <p>Presupuesto: @ViewBag.presupuesto</p>
+    <p>Cantidad de personas: @ViewBag.cantComensales</p>
+    <p>Receta sugerida: @ViewBag.platoSugerido</p>
+    <p>Dificultad: @ViewBag.dificultad</p>
+    <p>Tiempo de preparación: @ViewBag.tiempo minutos</p>
 </div>

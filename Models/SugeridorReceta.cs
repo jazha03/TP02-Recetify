@@ -2,11 +2,11 @@ namespace TP02.Models;
 
 public class SugeridorReceta{
 
-    public string Nombre {get; set;}
-    public DateTime FechaNacimiento {get;set;}
-    public string TipoComida {get; set;}
-    public double Presupuesto {get; set;}
-    public int CantComensales {get; set;}
+    public string nombre {get; set;}
+    public DateTime fechaNacimiento {get;set;}
+    public string tipoComida {get; set;}
+    public double presupuesto {get; set;}
+    public int cantComensales {get; set;}
 
     public int CalcularEdad(DateTime fechaNacimiento)
     {

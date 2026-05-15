@@ -2,41 +2,38 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    
 
 <div>
-    <h2>Generar sugerencia de receta</h2>
+    <h2>Sugerencia de receta</h2>
 
-    <form asp-controller="Home" asp-action="GenerarSugerencia" method="get">
+    <form asp-controller="Home" asp-action="SugeridorReceta" method="get">
 
         Nombre
-        <input type="text" id="Nombre" name="Nombre" />
+        <input type="text" id="nombre" name="Nombre" />
 
         <br><br>
 
         Fecha de nacimiento
-        <input type="date" id="FechaNacimiento" name="FechaNacimiento" />
+        <input type="date" id="fechaNacimiento" name="FechaNacimiento" />
 
         <br><br>
 
         Tipo de comida
 
-        <input type="radio" name="TipoComida" value="caliente" /> Caliente
+        <input type="radio" name="tipoComida" value="caliente" /> Caliente
 
-        <input type="radio" name="TipoComida" value="frio" /> Fría
+        <input type="radio" name="tipoComida" value="frio" /> Fría
 
         <br><br>
 
         Presupuesto
-        <input type="number" id="Presupuesto" name="Presupuesto" />
+        <input type="number" id="presupuesto" name="Presupuesto" />
 
         <br><br>
 
         Cantidad de personas
-        <input type="number" id="CantComensales" name="CantComensales" />
+        <input type="number" id="cantComensales" name="CantComensales" min="1" max="20" />
 
         <br><br>
 

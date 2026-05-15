@@ -19,19 +19,19 @@ public class HomeController : Controller
     }
     public IActionResult GenerarSugerencia(SugeridorReceta datos)
     {
-        int edad = datos.CalcularEdad(datos.FechaNacimiento);
-        string plato = datos.DeterminarPlato(datos.TipoComida, datos.Presupuesto);
-        double tiempo = datos.CalcularTiempo(datos.TipoComida, datos.CantComensales);
-        string dificultad = datos.DeterminarDificultad(datos.Presupuesto, datos.CantComensales);
+        int edad = datos.CalcularEdad(datos.fechaNacimiento);
+        string plato = datos.DeterminarPlato(datos.tipoComida, datos.presupuesto);
+        double tiempo = datos.CalcularTiempo(datos.tipoComida, datos.cantComensales);
+        string dificultad = datos.DeterminarDificultad(datos.presupuesto, datos.cantComensales);
 
       
-        ViewBag.Nombre = datos.Nombre;
+        ViewBag.Nombre = datos.nombre;
         ViewBag.Edad = edad;
         ViewBag.Plato = plato;
         ViewBag.Tiempo = tiempo;
         ViewBag.Dificultad = dificultad;
-        ViewBag.CantComensales = datos.CantComensales;
-        ViewBag.Presupuesto = datos.Presupuesto;
+        ViewBag.CantComensales = datos.cantComensales;
+        ViewBag.Presupuesto = datos.presupuesto;
         return View("Resultado");
     }
     public IActionResult Privacy()
