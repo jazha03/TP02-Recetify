@@ -6,3 +6,41 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<div>
+    <h2>Generar sugerencia de receta</h2>
+
+    <form asp-controller="Home" asp-action="GenerarSugerencia" method="get">
+
+        Nombre
+        <input type="text" id="Nombre" name="Nombre" />
+
+        <br><br>
+
+        Fecha de nacimiento
+        <input type="date" id="FechaNacimiento" name="FechaNacimiento" />
+
+        <br><br>
+
+        Tipo de comida
+
+        <input type="radio" name="TipoComida" value="caliente" /> Caliente
+
+        <input type="radio" name="TipoComida" value="frio" /> Fría
+
+        <br><br>
+
+        Presupuesto
+        <input type="number" id="Presupuesto" name="Presupuesto" />
+
+        <br><br>
+
+        Cantidad de personas
+        <input type="number" id="CantComensales" name="CantComensales" />
+
+        <br><br>
+
+        <input type="submit" value="Enviar" />
+
+    </form>
+</div>
