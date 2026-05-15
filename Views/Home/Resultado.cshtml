@@ -3,9 +3,10 @@
     <h2>Resultado de la receta</h2>
 
     <p>Nombre: @ViewBag.nombre</p>
-    <p>Fecha de nacimiento: @ViewBag.fechaNacimiento</p>
+    <p>Fecha de nacimiento: @ViewBag.fechaNacimiento.ToString("dd/MM/yyyy")</p>
+    <p>Edad: @ViewBag.edad años</p>
     <p>Tipo de comida: @ViewBag.tipoComida</p>
-    <p>Presupuesto: @ViewBag.presupuesto</p>
+    <p>Presupuesto: @ViewBag.presupuesto pesos</p>
     <p>Cantidad de personas: @ViewBag.cantComensales</p>
     <p>Receta sugerida: @ViewBag.platoSugerido</p>
     <p>Dificultad: @ViewBag.dificultad</p>

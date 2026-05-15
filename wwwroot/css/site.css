@@ -19,10 +19,14 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: rgb(255, 245, 233);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+  color: #79705d;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
+  color: #79705d;
   text-align: end;
 }
 
